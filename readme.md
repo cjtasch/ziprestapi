@@ -14,7 +14,7 @@ When testing you must install the application each time using the following comm
 
 
 
-## new query template 
+## Creating new Queries
 
 New queries should follow the below template with your desired path in the place of URL_PATH
 
