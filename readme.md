@@ -2,9 +2,9 @@
 
 When testing you must install the application each time using the following commands 
 
-    pip install -e .
-
-    flask run
+    $ export FLASK_APP=zipapi
+    $ pip install -e .
+    $ flask run
 
 
 
