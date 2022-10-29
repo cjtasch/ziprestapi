@@ -1,7 +1,7 @@
 from .__init__ import app
-from .__init__ import sqlQuery
+from .__init__ import sql_query
 
 @app.route("/table/<x>")
 def api_return_table(x):
-    return sqlQuery("SELECT * FROM {}".format(x))
+    return sql_query("SELECT * FROM {}".format(x))
 

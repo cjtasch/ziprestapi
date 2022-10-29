@@ -1,13 +1,13 @@
 from flask import Flask, jsonify
 import psycopg2
-
+import os
 
 app = Flask(__name__)
 
 
 
-def sqlQuery(y):
-    conn = psycopg2.connect(dbname="postgres", user="postgres", password="postgres", host="localhost")
+def sql_query(y):
+    conn = psycopg2.connect(dbname=os.environ.get('DB_NAME'), user=os.environ.get('DB_USER_NAME'), password=os.environ.get('DB_PWD'), host=os.environ.get('DB_HOST'))
     cur = conn.cursor()
     cur.execute("{}".format(y))
     row_headers=[x[0] for x in cur.description]

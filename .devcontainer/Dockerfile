@@ -23,5 +23,7 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/l
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-
-
+ENV DB_NAME postgres
+ENV DB_USER_NAME postgres
+ENV DB_PWD postgres
+ENV DB_HOST localhost

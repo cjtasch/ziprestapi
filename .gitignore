@@ -5,3 +5,6 @@ zipapi.egg-info/SOURCES.txt
 zipapi.egg-info/top_level.txt
 zipapi/__pycache__/__init__.cpython-310.pyc
 zipapi/__pycache__/api_table.cpython-310.pyc
+zipapi/__pycache__/__init__.cpython-311.pyc
+zipapi/__pycache__/api_table.cpython-311.pyc
+Container database.session.sql
