@@ -1,6 +1,6 @@
+import os
 from flask import Flask, jsonify
 import psycopg2
-import os
 
 app = Flask(__name__)
 
@@ -25,5 +25,4 @@ def index():
     return '<p>index page</p>'
 
 
-app.run()
 from zipapi.api_table import *
