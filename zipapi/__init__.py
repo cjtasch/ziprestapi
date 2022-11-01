@@ -1,13 +1,14 @@
+from http import server
 import os
 from flask import Flask, jsonify
-import psycopg2
+import pyodbc
 
 app = Flask(__name__)
 
 
 
 def sql_query(y):
-    conn = psycopg2.connect(dbname=os.environ.get('DB_NAME'), user=os.environ.get('DB_USER_NAME'), password=os.environ.get('DB_PWD'), host=os.environ.get('DB_HOST'))
+    conn = pyodbc.connect(database=os.environ.get('DB_NAME'), uid=os.environ.get('DB_USER_NAME'), pwd=os.environ.get('DB_PWD'), server=os.environ.get('DB_HOST'), driver='{SQL Server Native Client 10.0}')
     cur = conn.cursor()
     cur.execute("{}".format(y))
     row_headers=[x[0] for x in cur.description]
