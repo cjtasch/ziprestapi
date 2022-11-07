@@ -7,8 +7,8 @@ import sqlite3
 app = Flask(__name__)
 
 def connect_db():
-    con = sqlite3.connect('crosswalk.db')
-    #con = pyodbc.connect(database=os.environ.get('DB_NAME'), uid=os.environ.get('DB_USER_NAME'), pwd=os.environ.get('DB_PWD'), server=os.environ.get('DB_HOST'), driver='{SQL Server Native Client 10.0}')
+    #con = sqlite3.connect('crosswalk.db')
+    con = pyodbc.connect(database=os.environ.get('DB_NAME'), uid=os.environ.get('DB_USER_NAME'), pwd=os.environ.get('DB_PWD'), server=os.environ.get('DB_HOST'), driver='{SQL Server Native Client 10.0}')
     return con
 
 def sql_query(y):
